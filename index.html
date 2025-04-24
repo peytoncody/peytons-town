@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Peyton's Town</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Caveat&family=Comfortaa&family=Coming+Soon&family=Dancing+Script&family=Fredericka+the+Great&family=Gloria+Hallelujah&family=Great+Vibes&family=Indie+Flower&family=Lobster&family=Merienda&family=Pacifico&family=Playfair+Display&family=Sacramento&family=Satisfy&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+<body>
+  <div id="login">
+    <h1>Welcome to Peyton’s Town 💖</h1>
+    <input type="password" id="password" placeholder="Enter password">
+    <button onclick="checkPassword()">Enter</button>
+    <p id="error" class="error"></p>
+  </div>
+
+  <div id="diary" style="display:none;">
+    <button id="settingsToggle">⚙️ Settings</button>
+
+<button id="stealthToggle" class="stealth-bunny">🐰</button>
+<div id="stealthMode" class="stealth-message" style="display: none;">
+  <h2>Welcome to Notes</h2>
+  <p>This page contains general information and lists. Thank you for visiting! More below. This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.🫢</p>
+</div>
+
+    <div id="settingsPanel" class="settings">
+  <h3>✨ Customize Your Town ✨</h3>
+
+<label class="setting-label">Font Style:
+  <select id="fontSelector" class="setting-input">
+    <option value="sans-serif" style="font-family: sans-serif;">Sans-serif</option>
+    <option value="serif" style="font-family: serif;">Serif</option>
+    <option value="monospace" style="font-family: monospace;">Monospace</option>
+    <option value="'Courier New', monospace" style="font-family: 'Courier New', monospace;">Courier New</option>
+    <option value="'Lucida Handwriting', cursive" style="font-family: 'Lucida Handwriting', cursive;">Lucida Handwriting</option>
+    <option value="'Playfair Display', serif" style="font-family: 'Playfair Display', serif;">Playfair Display</option>
+    <option value="'Dancing Script', cursive" style="font-family: 'Dancing Script', cursive;">Dancing Script</option>
+    <option value="'Indie Flower', cursive" style="font-family: 'Indie Flower', cursive;">Indie Flower</option>
+    <option value="'Great Vibes', cursive" style="font-family: 'Great Vibes', cursive;">Great Vibes</option>
+    <option value="'Shadows Into Light', cursive" style="font-family: 'Shadows Into Light', cursive;">Shadows Into Light</option>
+    <option value="'Amatic SC', cursive" style="font-family: 'Amatic SC', cursive;">Amatic SC</option>
+    <option value="'Pacifico', cursive" style="font-family: 'Pacifico', cursive;">Pacifico</option>
+    <option value="'Caveat', cursive" style="font-family: 'Caveat', cursive;">Caveat</option>
+    <option value="'Satisfy', cursive" style="font-family: 'Satisfy', cursive;">Satisfy</option>
+    <option value="'Gloria Hallelujah', cursive" style="font-family: 'Gloria Hallelujah', cursive;">Gloria Hallelujah</option>
+    <option value="'Merienda', cursive" style="font-family: 'Merienda', cursive;">Merienda</option>
+    <option value="'Sacramento', cursive" style="font-family: 'Sacramento', cursive;">Sacramento</option>
+    <option value="'Lobster', cursive" style="font-family: 'Lobster', cursive;">Lobster</option>
+    <option value="'Coming Soon', cursive" style="font-family: 'Coming Soon', cursive;">Coming Soon</option>
+    <option value="'Fredericka the Great', cursive" style="font-family: 'Fredericka the Great', cursive;">Fredericka the Great</option>
+    <option value="'Comfortaa', cursive" style="font-family: 'Comfortaa', cursive;">Comfortaa</option>
+  </select>
+</label>
+
+  <label class="setting-label">Background Image:
+    <input type="file" id="bgUpload" class="setting-input" accept="image/*">
+  </label>
+</div>
+
+
+    <div id="diaryContent" style="display: none;">
+
+  <h2>Write a New Entry</h2>
+  <div class="emoji-bar">
+    <span onclick="selectMood('😌')">😌</span>
+    <span onclick="selectMood('😎')">😎</span>
+    <span onclick="selectMood('😡')">😡</span>
+    <span onclick="selectMood('🥰')">🥰</span>
+    <span onclick="selectMood('😈')">😈</span>
+    <span onclick="selectMood('🥲')">🥲</span>
+    <span onclick="selectMood('😞')">😞</span>
+    <span onclick="selectMood('😵')">😵</span>
+    <span onclick="selectMood('😳')">😳</span>
+  </div>
+<h3>Record a Video Entry:</h3>
+<video id="videoPreview" controls style="max-width: 100%; display: none;"></video>
+<br>
+<button onclick="startRecording()">Start Recording</button>
+<button onclick="stopRecording()" style="display: none;" id="stopBtn">Stop Recording</button>
+
+  <input type="text" id="title" placeholder="Entry title">
+  <textarea id="entry" rows="10" placeholder="Your thoughts..."></textarea>
+  <button onclick="saveEntry()">Save Entry</button>
+  <p class="saved-message" id="savedMessage"></p>
+
+  <h2>Your Entries 📖</h2>
+  <div id="entryList"></div>
+
+  <hr>
+  <h2>🗓️ Calendar View</h2>
+  <div id="calendarContainer"></div>
+
+  <hr>
+  <h2>🗃️ Archived Entries</h2>
+  <button onclick="toggleArchiveView()">View Archives</button>
+  <div id="archiveList" class="entry"></div>
+
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
