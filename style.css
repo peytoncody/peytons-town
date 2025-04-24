@@ -1,0 +1,141 @@
+body {
+  font-family: sans-serif;
+  background-color: #ffe6f2;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 2em;
+  color: #333;
+}
+
+input, textarea {
+  width: 100%;
+  margin: 1em 0;
+  padding: 0.5em;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 0.5em 1em;
+  background: #ffb3d1;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0.2em;
+}
+
+h1, h2 {
+  color: #cc0066;
+}
+
+.emoji-bar span {
+  font-size: 1.5em;
+  cursor: pointer;
+  margin-right: 0.5em;
+}
+
+.saved-message {
+  color: green;
+}
+
+.error {
+  color: red;
+}
+
+.entry {
+  background: #fff0f5;
+  padding: 1em;
+  margin-top: 1em;
+  border-radius: 10px;
+}
+
+
+.settings {
+  background: rgba(255, 240, 250, 0.9);
+  padding: 1em;
+  margin-top: 1em;
+  border: 2px dashed #ffb3d1;
+  border-radius: 12px;
+  max-width: 600px;
+  font-size: 0.95em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.setting-label {
+  display: block;
+  margin-bottom: 1em;
+  font-weight: bold;
+  color: #cc0066;
+}
+
+.setting-input {
+  margin-top: 0.3em;
+  padding: 0.4em;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  font-size: 0.95em;
+}
+
+.stealth-bunny {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  font-size: 1.5em;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.stealth-message {
+  background-color: #f9f9f9;
+  padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 2em auto;
+  text-align: center;
+  font-family: sans-serif;
+  color: #444;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#calendarContainer {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  max-width: 400px;
+  margin: 1em auto;
+  text-align: center;
+}
+
+.calendar-day {
+  padding: 0.5em;
+  background: #fff0f5;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+}
+
+.calendar-day.has-entry::after {
+  content: "✨";
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+}
+
+#archiveList {
+  display: none;
+  background: #f9f9f9;
+  padding: 1em;
+  border-radius: 10px;
+  margin-top: 1em;
+}
+
