@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Peyton's Town</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="login">
+    <h1>Welcome to Peyton’s Town 💖</h1>
+    <input type="password" id="password" placeholder="Enter password">
+    <button onclick="checkPassword()">Enter</button>
+    <p id="error" class="error"></p>
+  </div>
+
+  <div id="diary" style="display:none;">
+    <button id="settingsToggle">⚙️ Settings</button>
+
+<button id="stealthToggle" class="stealth-bunny">🐰</button>
+<div id="stealthMode" class="stealth-message" style="display: none;">
+  <h2>Welcome to Notes</h2>
+  <p>This page contains general information and lists. Thank you for visiting! More below. This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.This page contains general information and lists. Thank you for visiting! More below.🫢</p>
+</div>
+
+    <div id="settingsPanel" class="settings">
+  <h3>✨ Customize Your Town ✨</h3>
+
+  <label class="setting-label">Font Style:
+    <select id="fontSelector" class="setting-input">
+      <option value="sans-serif">Sans-serif</option>
+      <option value="serif">Serif</option>
+      <option value="monospace">Monospace</option>
+      <option value="'Courier New', monospace">Courier New</option>
+      <option value="'Lucida Handwriting', cursive">Handwriting</option>
+      <option value="'Playfair Display', serif">Playfair Display</option>
+      <option value="'Dancing Script', cursive">Dancing Script</option>
+      <option value="'Indie Flower', cursive">Indie Flower</option>
+    </select>
+  </label>
+
+  <label class="setting-label">Background Image:
+    <input type="file" id="bgUpload" class="setting-input" accept="image/*">
+  </label>
+</div>
+
+
+    <div id="diaryContent" style="display: none;">
+
+  <h2>Write a New Entry</h2>
+  <div class="emoji-bar">
+    <span onclick="selectMood('😌')">😌</span>
+    <span onclick="selectMood('😎')">😎</span>
+    <span onclick="selectMood('😡')">😡</span>
+    <span onclick="selectMood('🥰')">🥰</span>
+    <span onclick="selectMood('😈')">😈</span>
+    <span onclick="selectMood('🥲')">🥲</span>
+    <span onclick="selectMood('😞')">😞</span>
+    <span onclick="selectMood('😵')">😵</span>
+    <span onclick="selectMood('😳')">😳</span>
+  </div>
+  <input type="text" id="title" placeholder="Entry title">
+  <textarea id="entry" rows="10" placeholder="Your thoughts..."></textarea>
+  <button onclick="saveEntry()">Save Entry</button>
+  <p class="saved-message" id="savedMessage"></p>
+
+  <h2>Your Entries 📖</h2>
+  <div id="entryList"></div>
+
+  <hr>
+  <h2>🗓️ Calendar View</h2>
+  <div id="calendarContainer"></div>
+
+  <hr>
+  <h2>🗃️ Archived Entries</h2>
+  <button onclick="toggleArchiveView()">View Archives</button>
+  <div id="archiveList" class="entry"></div>
+
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
