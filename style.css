@@ -1,0 +1,48 @@
+body {
+  font-family: sans-serif;
+  background-color: #ffe6f2;
+  padding: 2em;
+  color: #333;
+}
+
+input, textarea {
+  width: 100%;
+  margin: 1em 0;
+  padding: 0.5em;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 0.6em 1.2em;
+  background: #ffb3d1;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+h1, h2 {
+  color: #cc0066;
+}
+
+.emoji-bar span {
+  font-size: 1.5em;
+  cursor: pointer;
+  margin-right: 0.5em;
+}
+
+.saved-message {
+  color: green;
+}
+
+.error {
+  color: red;
+}
+
+.entry {
+  background: #fff0f5;
+  padding: 1em;
+  margin-top: 1em;
+  border-radius: 10px;
+}
