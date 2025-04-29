@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Playfair+Display&family=Indie+Flower&family=Dancing+Script&display=swap');
+
+body {
+  background-image: url('scrapbook-background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Shadows Into Light', cursive;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  color: #ff69b4;
+  font-family: 'Dancing Script', cursive;
+  text-shadow: 1px 1px 2px white;
+}
+
+#diary {
+  max-width: 800px;
+  margin: 50px auto;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+textarea, input[type="text"] {
+  width: 100%;
+  background: #ffffff;
+  padding: 15px;
+  font-size: 1.1em;
+  font-family: 'Indie Flower', cursive;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1px 1px 5px #eee;
+}
+
+button {
+  background: #ffb6c1;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-family: 'Playfair Display', serif;
+}
+
+button:hover {
+  background: #ff69b4;
+  box-shadow: 0 0 10px #ff69b4;
+}
+
+#settingsPanel, .entry, #calendarContainer, #archiveList {
+  background: #fff;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 15px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.emoji-bar {
+  text-align: center;
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.emoji-bar span {
+  cursor: pointer;
+  margin: 0 5px;
+  transition: transform 0.2s;
+}
+
+.emoji-bar span:hover {
+  transform: scale(1.2);
+}
+
+.hidden {
+  display: none;
+}
+
+#settingsToggle, #stealthToggle {
+  float: right;
+  background-color: #ffe4e1;
+  margin-left: 10px;
+}
+
+#savedMessage {
+  color: green;
+  font-weight: bold;
+  text-align: center;
+}
+
+.calendar-day {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #fff0f5;
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px #ccc;
+  cursor: pointer;
+}
+
+.calendar-day.has-entry {
+  background-color: #ffc0cb;
+  font-weight: bold;
+  color: white;
+}
+
+#login {
+  text-align: center;
+  padding: 80px 20px;
+  max-width: 500px;
+  margin: 100px auto;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#error {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+select {
+  padding: 10px;
+  font-family: 'Shadows Into Light', cursive;
+  background-color: #fff;
+  border: 2px dashed pink;
+  border-radius: 8px;
+  font-size: 1em;
+}
