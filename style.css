@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Playfair+Display&family=Indie+Flower&family=Dancing+Script&display=swap');
+
+body {
+  background-image: url('scrapbook-background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Shadows Into Light', cursive;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Headings */
+h1, h2, h3 {
+  text-align: center;
+  color: #ff69b4;
+  font-family: 'Dancing Script', cursive;
+  text-shadow: 1px 1px 2px white;
+}
+
+#diary {
+  max-width: 100%;
+  margin: 0 auto;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Scrapbook Grid */
+#entryList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
+  padding: 40px;
+  justify-items: center;
+}
+
+/* Entry Card */
+.entry {
+  background-color: #fff9f4;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 2px 4px 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 300px;
+  position: relative;
+  font-family: "Shadows Into Light", cursive;
+  transform: rotate(calc(var(--rotate, 0deg)));
+  background: linear-gradient(135deg, #fff9f4, #fffefb);
+  overflow-wrap: break-word;
+}
+
+/* Tape */
+.entry::before, .entry::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 20px;
+  background: #fcecc9;
+  top: -10px;
+  transform: rotate(-5deg);
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.entry::after {
+  left: auto;
+  right: 10px;
+  transform: rotate(5deg);
+}
+.entry::before {
+  left: 10px;
+}
+
+/* Color Variety */
+.entry:nth-child(3n+1) {
+  background-color: #fdf6ff;
+  transform: rotate(-1.5deg);
+}
+.entry:nth-child(3n+2) {
+  background-color: #f0f9ff;
+  transform: rotate(1.5deg);
+}
+.entry:nth-child(3n+3) {
+  background-color: #fff5f5;
+  transform: rotate(-0.5deg);
+}
+
+/* Inputs */
+textarea, input[type="text"] {
+  width: 100%;
+  background: #ffffff;
+  padding: 15px;
+  font-size: 1.1em;
+  font-family: 'Indie Flower', cursive;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1px 1px 5px #eee;
+}
+
+input[type="file"] {
+  font-family: 'Shadows Into Light', cursive;
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+button {
+  background: #ffb6c1;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-family: 'Playfair Display', serif;
+}
+
+button:hover {
+  background: #ff69b4;
+  box-shadow: 0 0 10px #ff69b4;
+}
+
+/* Extras */
+#settingsPanel, #calendarContainer, #archiveList {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  margin: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.emoji-bar {
+  text-align: center;
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.emoji-bar span {
+  cursor: pointer;
+  margin: 0 5px;
+  transition: transform 0.2s;
+}
+.emoji-bar span:hover {
+  transform: scale(1.2);
+}
+
+#savedMessage {
+  color: green;
+  font-weight: bold;
+  text-align: center;
+}
+
+.calendar-day {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #fff0f5;
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px #ccc;
+  cursor: pointer;
+}
+.calendar-day.has-entry {
+  background-color: #ffc0cb;
+  font-weight: bold;
+  color: white;
+}
+
+/* Login */
+#login {
+  text-align: center;
+  padding: 80px 20px;
+  max-width: 500px;
+  margin: 100px auto;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#error {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+select {
+  padding: 10px;
+  font-family: 'Shadows Into Light', cursive;
+  background-color: #fff;
+  border: 2px dashed pink;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+/* Mascot */
+#mascot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: 70px;
+  width: 70px;
+  background-image: url('https://i.imgur.com/vQ2reJW.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: bounce 3s infinite ease-in-out;
+  z-index: 1000;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
