@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Peyton’s Town 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="login">
+    <h1>Welcome to Peyton’s Town 💖</h1>
+    <input type="password" id="password" placeholder="Enter password">
+    <button onclick="checkPassword()">Enter</button>
+    <p id="error" class="error"></p>
+  </div>
+
+  <div id="diary" style="display: none;">
+    <button id="settingsToggle">⚙️ Settings</button>
+    <button id="stealthToggle" class="stealth-bunny">🐰 Stealth</button>
+
+    <div id="settingsPanel" style="display: none;">
+      <h3>Customize Your Town ✨</h3>
+
+      <label>Choose a Font:
+        <select id="fontSelector">
+          <option value="sans-serif">Sans-serif</option>
+          <option value="serif">Serif</option>
+          <option value="monospace">Monospace</option>
+          <option value="'Courier New', monospace">Courier New</option>
+          <option value="'Lucida Handwriting', cursive">Handwriting</option>
+          <option value="'Playfair Display', serif">Playfair Display</option>
+          <option value="'Dancing Script', cursive">Dancing Script</option>
+          <option value="'Indie Flower', cursive">Indie Flower</option>
+        </select>
+      </label>
+
+      <br><br>
+
+      <label>Upload Background Image:
+        <input type="file" id="bgUpload" accept="image/*">
+      </label>
+    </div>
+
+    <h2>Write a New Entry 📖</h2>
+
+    <div class="emoji-bar">
+      <span onclick="selectMood('🎀')">🎀</span>
+      <span onclick="selectMood('🌸')">🌸</span>
+      <span onclick="selectMood('💖')">💖</span>
+      <span onclick="selectMood('🎉')">🎉</span>
+      <span onclick="selectMood('🐰')">🐰</span>
+      <span onclick="selectMood('🩰')">🩰</span>
+    </div>
+
+    <input type="text" id="title" placeholder="Entry Title...">
+    <textarea id="entry" rows="8" placeholder="Dear Diary..."></textarea>
+
+    <h3>Optional: Record a Video 🎥</h3>
+    <video id="recordedVideo" controls autoplay muted style="width: 100%; max-width: 300px; background: #eee;"></video><br>
+    <button id="startRecording">🎥 Start Recording</button>
+    <button id="stopRecording" disabled>🛑 Stop Recording</button>
+
+    <br><br>
+    <button onclick="saveEntry()">💌 Save Entry</button>
+    <p id="savedMessage" class="saved-message"></p>
+
+    <h2>Your Entries 📝</h2>
+    <div id="entryList"></div>
+
+    <hr>
+
+    <h2>📅 Calendar View</h2>
+    <div id="calendarContainer"></div>
+
+    <hr>
+
+    <h2>🗃️ Archived Entries</h2>
+    <button onclick="toggleArchiveView()">View Archives</button>
+    <div id="archiveList"></div>
+  </div>
+
+  <audio id="sparkleSound" src="sparkle.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
